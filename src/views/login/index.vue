@@ -31,7 +31,6 @@
 import Config from '@/config'
 import Cookies from 'js-cookie'
 import logoImg from '@/assets/logo/name.png'
-import { setToken } from '@/utils/auth' // getToken from cookie
 
 export default {
   name: 'Login',

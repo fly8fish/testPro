@@ -28,8 +28,6 @@ const user = {
   actions: {
     // 登录
     Login({ commit }, userInfo) {
-      // const username = userInfo.username
-      // const password = userInfo.password
       const rememberMe = userInfo.rememberMe
       return new Promise((resolve, reject) => {
         const res = {
@@ -50,18 +48,26 @@ const user = {
         setUserInfo(res.user, commit)
         commit('SET_LOAD_MENUS', true)
         resolve()
-        // login(username, password).then(res => {
-        //   setToken(res.token, rememberMe)
-        //   commit('SET_TOKEN', res.token)
-        //   setUserInfo(res.user, commit)
-        //   // 第一次加载菜单时用到， 具体见 src 目录下的 permission.js
-        //   commit('SET_LOAD_MENUS', true)
-        //   resolve()
-        // }).catch(error => {
-        //   reject(error)
-        // })
       })
     },
+
+    // Login({ commit }, userInfo) {
+    //   const username = userInfo.username
+    //   const password = userInfo.password
+    //   const rememberMe = userInfo.rememberMe
+    //   return new Promise((resolve, reject) => {
+    //     login(username, password).then(res => {
+    //       setToken(res.token, rememberMe)
+    //       commit('SET_TOKEN', res.token)
+    //       setUserInfo(res.user, commit)
+    //       // 第一次加载菜单时用到， 具体见 src 目录下的 permission.js
+    //       commit('SET_LOAD_MENUS', true)
+    //       resolve()
+    //     }).catch(error => {
+    //       reject(error)
+    //     })
+    //   })
+    // },
 
     // 获取用户信息
     GetInfo({ commit }) {

@@ -12,6 +12,7 @@ import App from './App'
 import router from './router/routers'
 import permission from './components/permission'
 import store from './store'
+import echarts from 'echarts'
 
 import '@/icons' // icon
 import './router/index' // permission control
@@ -19,6 +20,7 @@ import './router/index' // permission control
 Vue.use(permission)
 Vue.use(ElementUI, { locale })
 Vue.config.productionTip = false
+Vue.prototype.$echarts = echarts
 require('babel-polyfill')
 
 new Vue({

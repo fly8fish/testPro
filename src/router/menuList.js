@@ -36,11 +36,19 @@ export const menuListMap = [
     ]
   },
   {
-    name: '软探针数据分析', path: '/softdataAna', redirect: 'noredirect', component: Layout, alwaysShow: true, meta: { title: '软探针数据分析', icon: 'location' },
+    name: '软探针数据分析', path: '/softAnalysis', redirect: 'noredirect', component: Layout, alwaysShow: true, meta: { title: '软探针数据分析', icon: 'location' },
     children: [
       { name: '用户数据分析', path: 'user', component: () => import('@/views/softDataAnalysis/user/index'), meta: { title: '用户数据分析', icon: 'dot' }},
       { name: '地市数据分析', path: 'city', component: () => import('@/views/softDataAnalysis/city/index'), meta: { title: '地市数据分析', icon: 'dot' }},
       { name: '质差用户输出', path: 'quality', component: () => import('@/views/softDataAnalysis/quality/index'), meta: { title: '质差用户输出', icon: 'dot' }}
+    ]
+  },
+  {
+    name: '智能网关数据分析', path: '/gatewayAnalysis', redirect: 'noredirect', component: Layout, alwaysShow: true, meta: { title: '智能网关数据分析', icon: 'location' },
+    children: [
+      { name: '用户数据分析', path: 'user', component: () => import('@/views/gatewayAnalysis/user/index'), meta: { title: '用户数据分析', icon: 'dot' }},
+      { name: '地市数据分析', path: 'city', component: () => import('@/views/gatewayAnalysis/city/index'), meta: { title: '地市数据分析', icon: 'dot' }},
+      { name: '弱光用户输出', path: 'lowlight', component: () => import('@/views/gatewayAnalysis/lowlight/index'), meta: { title: '弱光用户输出', icon: 'dot' }}
     ]
   },
   { path: '*', redirect: '/404', hidden: true }
